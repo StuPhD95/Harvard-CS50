@@ -37,8 +37,8 @@ print(f"{x+y:.2f}")    # .2f rounds to two digits
 name = input("What is your name? ")
 def hello(person):
     print("Hello", person)
-
 hello(name)
+
 n = int(input("What is n? "))
 def square(n):
     return n**2 # equivalent to pow(n,2)

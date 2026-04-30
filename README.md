@@ -4,7 +4,7 @@
 ```python
 #%% Strings (str)
 name = input("What's your name? ").strip().title()
-first, last = name.split(" ")
+first, last = name.split(" ")    # split at spaces
 """
 .strip() removes left and right extra spaces from str
 .capitalise() capitalises first word of str
@@ -31,12 +31,13 @@ y = float(input("What is y? "))
 print(round(x+y))      # round(#) rounds # to the nearest integer
 print(f"{x+y:,}")      # :, formats the str with a comma each triple of digits with a comma
 print(round(x/y,2))    # round(#,n) rounds # to n digits
-print(f"{x+y:.2f}") # .2f rounds to two digits
+print(f"{x+y:.2f}")    # .2f rounds to two digits
 
 #%% Functions
 name = input("What is your name? ")
 def hello(person):
     print("Hello", person)
+
 hello(name)
 n = int(input("What is n? "))
 def square(n):

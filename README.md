@@ -1,7 +1,7 @@
 # Harvard-CS50
 
-**Lecture 1 Notes: Functions and Variables**
-
+**Lecture 1 Notes (Functions and Variables)**
+```python
 #%% Strings (str)
 
 name = input("What's your name? ").strip().title()

@@ -43,3 +43,5 @@ n = int(input("What is n? "))
 def square(n):
     return n**2 # equivalent to pow(n,2)
 square(n)
+
+**Lecture 2 Notes (Conditionals)**

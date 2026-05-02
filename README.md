@@ -46,3 +46,81 @@ square(n)
 ```
 
 **Lecture 2 Notes (Conditionals)**
+
+```python
+"""
+Basic Syntax
+=  (assignment, copying right-to-left)
+== (equality, comparing left and right)
+!= (not equal to)
+"""
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+#%%
+if x < y:
+    print("x is less than y")
+elif x > y: # elif (else if)
+    print("x is greater than y")
+else:
+    print("x is equal to y")
+
+#%%
+if x < y or x > y:
+    print("x is not equal to y")
+else:
+    print("x is equal to y")
+
+#%%
+if x == y :
+    print("x is equal to y")
+else:
+    print("x is not equal to y")
+
+#%%
+score = int(input("Score: "))
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+#%%
+def main():
+    n= int(input("n: "))
+    if is_even(n):
+        print("Even")
+    else:
+        print("Odd")
+
+def is_even(n):
+    if n%2 == 0:
+        return True
+    else:
+        return False
+    
+def is_even_pythonic(n):
+    return True if n%2 == 0 else False
+
+def is_even_pythonic_best(n):
+    return n%2 == 0
+
+main()
+
+#%%
+name = input("What's your name? ")
+ 
+match name:
+    case "Harry" | "Hermione" | "Ron":
+        print("Gryffindor")
+    case "Draco":
+        print("Slytherin")
+    case _:
+        print("Who?")
+```

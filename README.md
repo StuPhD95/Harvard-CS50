@@ -49,7 +49,6 @@ square(n)
 
 ```python
 """
-Basic Syntax
 =  (assignment, copying right-to-left)
 == (equality, comparing left and right)
 != (not equal to)

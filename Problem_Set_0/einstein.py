@@ -1,3 +1,4 @@
-mass = int(input())
-energy = int(mass*300000000**2)
-print(energy)
+c = 300000000
+m = int(input("m: "))
+e = m*pow(c,2)
+print("e:", e)

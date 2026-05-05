@@ -125,3 +125,137 @@ match name:
 ```
 
 **Lecture 3 (Loops)**
+
+```python
+#%% While loop (counting down).
+i = 3
+while i != 0:
+    print("meow")
+    i -= 1  # i.e. i=i-1
+#%% While loop (counting up).
+i = 0
+while i < 3:
+    print("meow")
+    i += 1  # i.e. i=i+1
+#%% For loop.
+for _ in range(3): # range(n) returns n values
+    print("meow") 
+#%% Pythonic answer.
+print("meow\n" * 3, end="")
+
+#%%
+def main():
+    number = get_number()
+    meow(number)
+def get_number():
+    while True:
+        n = int(input("n: ")) 
+        if n > 0:
+            break
+    return n
+def meow(n):
+    for _ in range(n):
+        print("meow")
+
+#%%
+students = ["Hermione", "Harry", "Ron"]
+
+for student in students:
+    print(student)
+
+for i in range(len(students)):
+    print(i+1, students[i])
+    
+# Add an element to a list.
+students.append("Draco")
+print(students)
+# Remove an element from a list.
+students.remove("Draco")
+print(students)
+# Add an element to a list at a specified index.
+students.insert(0,"Luna") 
+print(students)
+# Add a list to a list.
+students.extend(["Draco", "Snape"])
+print(students)
+# Reverse the order of a list.
+students.reverse()
+print(students)
+
+# List comprehensions.
+lowercase_students = [name.lower() for name in students]
+print(lowercase_students)
+long_names = [name.lower() for name in students if len(name) > 4]
+print(long_names)
+# Dictionary comprehension.
+student_dict = {name: "HP" for name in students}
+print(student_dict)
+
+#%% Dicitionary (dict) 
+"""
+{} curly brackets
+"key":"value"
+"""
+# A dicitionary with one set of values (houses).
+students = {
+    "Hermione":"Gryffindor",
+    "Harry":"Gryffindor",
+    "Ron":"Gryffindor",
+    "Draco": "Slytherin"}
+ 
+for student in students:
+    print(student) # prints keys
+    
+for student in students:
+    print(students[student]) # prints values
+    
+for student in students:
+    print(student, students[student], sep = ", ")
+
+# A dictionary with two sets of values (house and patronus).
+students_TwoValues = [
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None}  # Draco has no patronus.  
+]
+
+for student in students_TwoValues:
+    print(student["name"], student["house"], student["patronus"], sep = ", ")
+#%%
+def main():
+    #print_column(3)
+    #print_row(4)
+    print_square(3)
+    
+def print_column(height):
+    print("# \n"*height, end="")
+    
+def print_row(width):
+    print("?"*width)
+    
+def print_square(size):
+    for _ in range(size):
+        print("#"*size)
+        
+main()
+
+#%% Dictionary manipulation.
+fleet = {
+    "ship": "USS Enterprise", 
+    "registry": "NCC-1701-D",
+    "captain": "Jean-Luc Picard"
+}
+
+# Return the number of keys.
+print(len(fleet)) 
+# Return value associated to ship.
+print(fleet.get("ship")) # equivalent to fleet["ship"]
+# Add key/value to dictionary.
+fleet.update({"length": "641 m"}) 
+# Remove key from dictionary.
+fleet.pop("captain") # .clear() removes all keys
+
+print(", ".join(fleet.keys()))   # .keys() returns all keys
+print(", ".join(fleet.values())) # .values() returns all values
+```
